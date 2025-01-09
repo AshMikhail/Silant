@@ -1,0 +1,33 @@
+
+.login-form {
+    display:;
+    /*align-items: center;*/
+    /*display: grid;*/
+    /*grid-template-rows: 5px 1fr 1fr 1fr 5px;*/
+    /*grid-template-areas: 'z' 'a' 'b' 'c' 'z' ;*/
+}
+
+input {
+    width: 100%;
+    margin: 10px;
+    height: 30px;
+    width: 150px;
+}
+.input-username{
+    grid-area: a;
+}
+
+.input-password{
+    grid-area: b;
+}
+.login-button {
+    grid-area: c;
+
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.login-button:hover, .login-button:focus {
+    background: #e2e2f2;
+  }

@@ -1,0 +1,9 @@
+.App {
+    background-color: rgb(240, 244, 219);
+    margin:5px;
+    margin-top:10px;
+    box-shadow: 5px 5px 5px gray;
+    justify-items: center;
+    text-align: center;
+    padding: 5px;
+}

@@ -1,0 +1,46 @@
+header {
+    background-color: rgb(240, 244, 219);
+    margin:5px;
+    box-shadow: 5px 5px 5px gray;
+    justify-items: center;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 20px 1fr 1fr 60px 20px;
+    grid-template-rows: 20px 80px 30px 20px;
+    grid-template-areas: "A A z z y" "A A B C y" "x d d d y" "x  w w w y";
+}
+
+.logo {
+    grid-area: A;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+.headerContacts {
+    grid-area: B;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.authButton {
+    grid-area: C;
+    margin-top: 25%;
+    width: 60px;
+    height: 30px;
+    padding-top: 9px;
+    font-family: AstraSansItalic;
+    display: inline-block;
+    background: #f2f2f2;
+    border: 1px solid #000;
+    border-radius: 5px;
+    color: #333;
+    text-decoration: none;
+}
+
+.authButton:hover, .authButton:focus {
+    background: #e2e2f2;
+  }
+.headerText {
+    grid-area: d;
+    padding-left: 30px;
+}
