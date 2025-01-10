@@ -14,8 +14,6 @@ export default function Maintenances() {
     const getMaintenances = () => {
       axios.get('http://localhost:8000/api/maintenance/').then(resp => {
         setMaintenances(resp.data);
-        console.log(companyName);
-        console.log(resp.data)
         setLoading(false);
       });
     }
@@ -23,9 +21,6 @@ export default function Maintenances() {
         getMaintenances()
     }, []);
 
-    // const search = maintenances.filter(mtrs => {
-    //     return mtrs.maintenance_company.toLowerCase().include(companyName.toLowerCase());
-    // });
         if (isLoading) {
         return <div className='content_block'><h1>Loading...</h1></div>;
           }

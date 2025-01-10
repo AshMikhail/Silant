@@ -19,8 +19,6 @@ function App() {
                     <Route path="/login" element={<Login />} />
                     <Route exaxt path={'/machine/:machId'} Component={Machine}/>
                     <Route exaxt path={'/Maintenances'} Component={Maintenances}/>
-                  {/*<Route path="/reset" element={<PasswordReset />} />*/}
-                  {/*<Route path="/dashboard" element={<DefaultLayout />} />*/}
                 </Routes>
               </div>
           </AuthProvider>

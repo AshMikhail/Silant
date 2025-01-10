@@ -28,7 +28,10 @@ export default function Machinelist() {
     const [value, setValue] = React.useState('');
 
     const search = machines.filter(machine => {
-        return machine.factory_number.toLowerCase().includes(value.toLowerCase());
+        if (value.length < '4') {
+            return null
+        }else {
+        return machine.factory_number.toLowerCase().includes(value.toLowerCase());}
     });
 
     const companyFilter = machines.filter(machine => {
@@ -100,11 +103,12 @@ export default function Machinelist() {
                               type="text"
                               id="search"
                               autoComplete="on"
-                              // value={}
                               onChange={(e) => setValue(e.target.value)}
                               required
                           />
                       </form>
+                      { search.length !== 0 ?
+                      <>
                       <p>Информация о комплектации и технических характеристиках Вашей техники</p>
                       <table border="5" width="600" margin="5">
                           <thead>
@@ -120,7 +124,7 @@ export default function Machinelist() {
                           <td>Номер Управляемого Моста</td>
                           </thead>
                           <tbody>
-                          {
+                            {
                               search.map((name) =>
                                   <tr key={name.id}>
                                       <td>{name.factory_number}</td>
@@ -135,10 +139,12 @@ export default function Machinelist() {
                                       <td>{name.number_controlled_bridge}</td>
                                   </tr>
                               )
-                          }
+                            }
                           </tbody>
                       </table>
-
+                      </>
+                        :
+                        <><h1>Введите данные для поиска!</h1></>}
                   </>
               }
         </div>
